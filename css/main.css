@@ -1,0 +1,60 @@
+@charset "utf-8";
+/* CSS Document */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+#clList {
+	margin-bottom: 10px;
+}
+
+#changes label {
+  display: inline-block;
+  width: 23%;
+}
+body {
+    background-color: #CCC;
+}
+.clear {
+	height: 10px;
+	}
+.container {
+	background-color: #fff;
+}
+nav {
+	max-width: 1170px;
+	margin: auto;
+}
+.navbar {
+    border-radius: 4px 4px 0 0;
+    margin-bottom: 0px;
+}
+
+.navbar-primary {
+    background-color: #337AB7;
+    border: 1px solid transparent;
+    color: #fff;
+    padding: 1% 0;
+}
+
+.navbar-inverse .navbar-text {
+    color: #FFF;
+}
+#panelcode {
+	    height: 750px;
+	}
+.panel-footer {
+    background-color: #333;
+    border-top: 0;
+    color: #FFF;
+}
+
+footer {
+	max-width: 1170px;
+	margin: auto;
+    background-color: #777;
+}
+.panel-title {
+    text-align: right;
+}
