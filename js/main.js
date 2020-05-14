@@ -12,6 +12,30 @@ $(document).ready(function() {
             }
      });
 
+     // VRBO Funtions
+     $("#chk-vrbo").click(function() {
+       if ($(this).is(":checked")) {
+           //$('#ftp-path').toggle('slow');
+           $("#in-vrbo,#add-vrbo" ).removeAttr("disabled");
+           //$('#vrbo-group').toggle('slow');
+           $("#in-vrbo").focus();
+           } else {
+             $("#in-vrbo,#add-vrbo").attr("disabled", "disabled");
+           }
+       });
+
+       $("#add-vrbo").click(function(){
+   		    var newcl = $('#in-vrbo').val();
+   			  if(newcl !== ""){
+   				      $('#vrbo-list').append("<div class='panel panel-default'><div class='panel-body'><p><span class='lbl vrbo'>mlp.hub." + newcl + ".page.heading</span><br><span class='lbl vrbo'>mlp.hub." + newcl + ".page.subheading</span><br><br><span class='lbl vrbo'>component.branding.heading." + newcl + "</span><br><span class='lbl vrbo'>component.branding.subheading." + newcl + "</span><br><br><span class='lbl vrbo'>mlp.component.destinations.heading." + newcl + "</span><br><br><span class='lbl vrbo'>component.listings.card.search." + newcl + "</span><br><span class='lbl vrbo'>component.listings.heading." + newcl + "</span><br><br><span class='lbl vrbo'>mlp.hub." + newcl + ".page.title</span><br><span class='lbl vrbo'>mlp.hub." + newcl + ".meta.description</span><br><br><span class='lbl vrbo'><b>*Hero Tags*</b></span><br><span class='lbl vrbo'>mlp_" + newcl + "_default_vrbo</span></p></div></div><button class='btn btn-danger remove-vrbo' style='float: right;margin-top: -10%; margin-bottom: .5em;'>Clean MPLs Section</button>");
+   				$('#in-vrbo').val('').focus();
+   			}
+   		});
+
+   		$( "#vrbo-list" ).delegate( ".remove-vrbo", "click", function() {
+   			$( this ).prev().remove();
+   			$( this ).remove();
+   		});
 
 	$("#inSignature").val(localStorage.signature);
 	$("#inComments").val(localStorage.comments);
@@ -33,7 +57,7 @@ $(document).ready(function() {
 		// Production
         if ($('#chk-prod').is(":checked")) {
             prodpath = "h5. Image Path: \n";
-            prodpath += "https://www.dropbox.com/home/MeSo%20Campaigns/Accenture/" + $("#in-prod").val();
+            prodpath += "https://expediacorp.sharepoint.com/:f:/r/sites/MeSoCampaigns/Shared%20Documents/ACCENTURE/" + $("#in-prod").val();
             console.log(prodpath);
             text += prodpath + "\n";
         }
@@ -58,14 +82,25 @@ $(document).ready(function() {
 			text += "\n";
 		}
 
-		// cl number
+    // VRBO
+		function parseCL() {
+			var cln = new Array;
+			$('#vrbo-list .vrbo').each(function( index ) {
+				cln.push( $( this ).text() );
+			});
+			return cln;
+			console.log(cln);
+		}
+		var cln = parseCL();
 		if (cln.length > 0) {
-			text += "h5. Cl Number\n";
+			vrboMpls = "h5. MLPs Created for Vrbo\n";
 			// for(var i=0; i < cln.length; i++) {
 			// 	text += "{{" + cln[i] + "}} ";
 			// }
-			text += cln.join(', ');
-			text += "\n";
+			vrboMpls += cln.join('\n');
+			vrboMpls += "\n";
+			console.log(vrboMpls);
+		text += vrboMpls + "\n";
 		}
 
 		// comments

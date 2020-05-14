@@ -1,3 +1,14 @@
+### Release Note | CRG v3.6
+Update index.aspx Update
+- Update the Path info
+- Create New section => VRBO Landing page
+js/main.js
+- Update the Production Path info to SharePoint
+- Create New funtions for Vrbo
+-- Enable section by check Box
+-- Introdues a parameter for display some information (MPLs)
+-- Delete and clear option
+------------------------
 ### Release Note | CRG v3.5
 index.aspx Update
 - Se actualizan los feactures de los changes.

@@ -39,7 +39,7 @@
                     <div class="form-group">
                         <div class="input-group">
                             <span class="input-group-addon">
-                                        https://www.dropbox.com/home/MeSo%20Campaigns/Accenture/
+                                        /MeSoCampaigns/Shared%20Documents/ACCENTURE/
                                     </span>
                             <input type="text" class="form-control" id="in-prod" disabled="true">
                         </div>
@@ -49,6 +49,7 @@
                     <div class="form-group">
                         <textarea id="inUrls" class="form-control" rows="10"></textarea>
                     </div>
+
                     <div class="form-group">
                         <div class="btn-group">
                             <button type="button" class="btn btn-default dropdown-toggle btn-xs" data-toggle="dropdown">
@@ -67,7 +68,7 @@
                         <div class="checkbox">
                             <div class="panel panel-default">
                                 <div class="panel-body">
-                                    <label><input value="Creative Images" type="checkbox">Creative Imgs.</label>
+                                    <label><input value="Creative Images" type="checkbox">Creative Imgs</label>
                                     <label><input value="Hero" type="checkbox">Hero</label>
                                     <label><input value="Logos" type="checkbox">Logos</label>
                                     <label><input value="Logo Bar" type="checkbox">Logo Bar</label>
@@ -93,14 +94,36 @@
                                     <label><input value="Style" type="checkbox">Style</label>
                                     <label><input value="URL Links" type="checkbox">URL Links</label>
                                     <hr />
-                                    <label><input value="PaCE Images Uploaded" type="checkbox">PaCE Imgs.</label>
-                                    <label><input value="PaCE Promo Carrousel" type="checkbox">Promo Car.</label>
-                                    <label><input value="PaCE Media Carrousel" type="checkbox">Media Car.</label>
-                                    <label><input value="PaCE Map" type="checkbox">Map</label>
+                                    <label><input value="Images Uploaded" type="checkbox">Images Up.</label>
+                                    <label><input value="Promo Carrousel" type="checkbox">Promo Car.</label>
+                                    <label><input value="Media Carrousel" type="checkbox">Media Car.</label>
+                                    <label><input value="Map" type="checkbox">Map</label>
+
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <label for="chk-vrbo"><input type="checkbox" value="VRBO" id="chk-vrbo" /> VRBO</label>
+                    <div class="form-group" id="vrbo-group">
+                        <div class="input-group">
+                            <span class="input-group-addon">Template Name</span>
+                            <input type="text" class="form-control" id="in-vrbo" disabled="true" aria-label="Template Name">
+                            <a id="add-vrbo" class="input-group-addon btn btn-info" disabled="true">&nbsp;&#x2714;</a>
+                        </div>
+                        <!--
+                        <div class="input-group">
+                            <span class="input-group-addon">Template Name</span>
+                            <input type="text" class="form-control" aria-label="Template Name">
+                            <span class="input-group-btn">
+                                <button class="btn btn-info" type="button">&nbsp;&#x2714;</button>
+                              </span>
+                          </div>
+                        -->
+                        <div id="vrbo-list"></div>
+                      </div>
+                      <div class="clear"><br></div>
+
+
                     <label for="inComments">Comments</label>
                     <div class="form-group">
                         <textarea id="inComments" class="form-control" rows="3"></textarea>
@@ -136,8 +159,8 @@
     </form>
     </div>
     <!--- Footer Panel --->
-    <footer class="panel-footer"><strong>Accenture | Team Expedia 2018</strong>
-        <p class="footer" style="float: right;">ver 3.4</p>
+    <footer class="panel-footer"><strong>Accenture | Team Expedia 2020</strong>
+        <p class="footer" style="float: right;">ver 3.6</p>
     </footer>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery.js"></script>
@@ -145,7 +168,5 @@
     <script src="js/bootstrap.js"></script>
     <script src="js/parseurl.js"></script>
     <script src="js/main.js"></script>
-
 </body>
-
 </html>
